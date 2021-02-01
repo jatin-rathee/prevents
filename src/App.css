@@ -48,3 +48,33 @@ textarea.full {
 .relative {
 	color: #004085;
 }
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+.modal-content {
+	border: 2px solid dodgerblue;
+}
+
+.fancy-modal .modal-header {
+	background: dodgerblue !important;
+	color: #fff;
+	padding: .2rem .5rem;
+}
+
+.fancy-modal button {
+	color: #fff;
+}
+
+.fancy-card .card-body {
+	height: 30vh;
+}
+
+.qr-code {
+	width: 10rem;
+}

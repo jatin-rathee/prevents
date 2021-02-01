@@ -30,7 +30,7 @@ const PatientDetails = () => {
 				<Form.Control
 					type='text'
 					className='w-40'
-					defaultValue={details?.age}
+					defaultValue={details?.Age}
 				/>
 			</div>
 
@@ -39,7 +39,7 @@ const PatientDetails = () => {
 				<Form.Control
 					type='text'
 					className='w-40'
-					defaultValue={details?.ethnicity}
+					defaultValue={details?.Ethnicity}
 				/>
 			</div>
 
@@ -48,7 +48,7 @@ const PatientDetails = () => {
 				<Form.Control
 					type='text'
 					className='w-40'
-					defaultValue={details?.gender}
+					defaultValue={details?.Sex}
 				/>
 			</div>
 		</div>

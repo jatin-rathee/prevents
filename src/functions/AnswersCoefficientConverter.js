@@ -30,7 +30,6 @@ let getCoefficient = (answer, question) => {
     else coef = 1;
   } else if (
     answer == 'no' ||
-    answer == 'No' ||
     answer == null ||
     answer == 'null' ||
     answer == '' ||

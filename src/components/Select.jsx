@@ -21,7 +21,7 @@ const Select = ({ label, name, handleChange, value, options, type }) => {
 				)
 			}
 		} else {
-			return options.map((each) => <option key={each}>{each}</option>)
+			return options.map((each) => <option key={each.toLowerCase()}>{each}</option>)
 		}
 	}
 

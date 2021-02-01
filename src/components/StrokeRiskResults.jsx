@@ -1,10 +1,13 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import { useLocation } from 'react-router-dom'
+import resultContext from '../context/resultContext'
 import AddToSummaryCheck from './AddToSummaryCheck'
 
 const StrokeRiskResults = () => {
 	const location = useLocation()
+
+	const { result } = React.useContext(resultContext)
 
 	return (
 		<>
@@ -22,17 +25,15 @@ const StrokeRiskResults = () => {
 					<h4>Patient Stroke Risk result</h4>
 					<div className='mt-5 d-flex align-items-center justify-content-around'>
 						<span className='bg-grey p-3'>5 Years Risk</span>
-						<h3 className='years bg-light p-3'>9.72%</h3>
+						<h3 className='years bg-light p-3'>{result.AbsoluteFA5}%</h3>
 					</div>
 					<div className='my-3 d-flex align-items-center justify-content-around'>
 						<span className='bg-grey p-3'>Relative Risk</span>
 						<h3 className='relative bg-light p-3'>4.18 x</h3>
 					</div>
 					<br />
-					<br />
-
 					<Card.Text>
-						Your patient of having a stoke in the next five years is 9.72%. This
+						Your patient of having a stoke in the next five years is {result.AbsoluteFA5}%. This
 						means their relative risk of stroke is approximately 4.18 times that
 						of someone their own age, gender and ethnicity without any
 						contributing risk factors. Patient's Overview
